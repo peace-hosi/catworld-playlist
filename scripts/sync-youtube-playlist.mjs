@@ -89,7 +89,7 @@ function dailyShuffle(array) {
 const tracks = await fetchPlaylistItems();
 
 // プレイリスト先頭5件（新着枠）
-const latestCount = 5;
+const latestCount = 2;
 const latestTracks = tracks.slice(0, latestCount);
 
 // 残りは順番をシャッフル
