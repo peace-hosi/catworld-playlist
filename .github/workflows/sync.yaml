@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: sync-playlist
+  cancel-in-progress: true
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -15,11 +19,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+
+      - name: Update from origin
+        run: |
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
 
       - name: Run script
         run: node scripts/sync-youtube-playlist.mjs
@@ -31,14 +42,7 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-
-          git fetch origin main
-          git checkout main
-          git reset --hard origin/main
-
           git add public/playlist.json
-
           git diff --cached --quiet && exit 0
-
           git commit -m "update playlist"
           git push origin HEAD:main
