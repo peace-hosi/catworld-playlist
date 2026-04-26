@@ -57,7 +57,50 @@ async function fetchPlaylistItems() {
   return tracks;
 }
 
+function seededRandom(seed) {
+  let x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
+}
+
+function dailyShuffle(array) {
+  const now = new Date();
+
+  // JSTに変換
+  const jst = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+
+  // 朝3時までは前日扱い
+  if (jst.getHours() < 3) {
+    jst.setDate(jst.getDate() - 1);
+  }
+
+  const y = jst.getFullYear();
+  const m = String(jst.getMonth() + 1).padStart(2, "0");
+  const d = String(jst.getDate()).padStart(2, "0");
+
+  const seed = Number(`${y}${m}${d}`);
+
+  for (let i = array.length - 1; i > 0; i--) {
+    const r = seededRandom(seed + i);
+    const j = Math.floor(r * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 const tracks = await fetchPlaylistItems();
+
+// プレイリスト先頭5件（新着枠）
+const latestCount = 5;
+const latestTracks = tracks.slice(0, latestCount);
+
+// 残りは順番をシャッフル
+const restTracks = tracks.slice(latestCount);
+dailyShuffle(restTracks);
+
+// 結合
+const finalTracks = [
+  ...latestTracks.map(track => ({ ...track, tag: "new" })),
+  ...restTracks.map(track => ({ ...track, tag: "daily" })),
+];
 
 await fs.mkdir("public", { recursive: true });
 
@@ -67,7 +110,7 @@ await fs.writeFile(
     {
       updatedAt: new Date().toISOString(),
       source: `https://www.youtube.com/playlist?list=${PLAYLIST_ID}`,
-      tracks,
+      tracks: finalTracks,
     },
     null,
     2
@@ -75,4 +118,4 @@ await fs.writeFile(
   "utf8"
 );
 
-console.log(`Wrote ${OUT_PATH}: ${tracks.length} tracks`);
+console.log(`Wrote ${OUT_PATH}: ${finalTracks.length} tracks`);
