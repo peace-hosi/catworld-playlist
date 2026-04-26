@@ -31,4 +31,5 @@ jobs:
           git config user.email github-actions@github.com
           git add public/playlist.json
           git diff --cached --quiet || git commit -m "update playlist"
+          git pull --rebase origin main
           git push
