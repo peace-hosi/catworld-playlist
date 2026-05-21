@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-20T20:01:04.052Z",
+  "updatedAt": "2026-05-21T19:42:15.937Z",
   "source": "https://www.youtube.com/playlist?list=PLqkR5A_bTS5vSVI-KI94HwwOrYgefTGSi",
   "tracks": [
     {
@@ -13,12 +13,6 @@
       "url": "https://www.youtube.com/watch?v=yB9b36bQIg0",
       "mode": 0,
       "tag": "new"
-    },
-    {
-      "name": "仲の良いオシドリ夫婦の猫　【今日のリアルタイムひのき猫】",
-      "url": "https://www.youtube.com/watch?v=sgGS6OiuDl8",
-      "mode": 0,
-      "tag": "daily"
     },
     {
       "name": "どうしてもファミリーで寝たい猫",
@@ -51,14 +45,20 @@
       "tag": "daily"
     },
     {
-      "name": "外に出たい猫を巧妙にかわす息子がおもしろい",
-      "url": "https://www.youtube.com/watch?v=y5eSIY4t8Gs",
+      "name": "隠れてオヤジの顔を蹴る猫　【今日のひのき猫】",
+      "url": "https://www.youtube.com/watch?v=FSNHhC3DGBE",
       "mode": 0,
       "tag": "daily"
     },
     {
-      "name": "隠れてオヤジの顔を蹴る猫　【今日のひのき猫】",
-      "url": "https://www.youtube.com/watch?v=FSNHhC3DGBE",
+      "name": "仲の良いオシドリ夫婦の猫　【今日のリアルタイムひのき猫】",
+      "url": "https://www.youtube.com/watch?v=sgGS6OiuDl8",
+      "mode": 0,
+      "tag": "daily"
+    },
+    {
+      "name": "外に出たい猫を巧妙にかわす息子がおもしろい",
+      "url": "https://www.youtube.com/watch?v=y5eSIY4t8Gs",
       "mode": 0,
       "tag": "daily"
     }
