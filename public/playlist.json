@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-08T19:59:46.637Z",
+  "updatedAt": "2026-06-09T19:55:07.182Z",
   "source": "https://www.youtube.com/playlist?list=PLqkR5A_bTS5vSVI-KI94HwwOrYgefTGSi",
   "tracks": [
     {
@@ -15,20 +15,8 @@
       "tag": "new"
     },
     {
-      "name": "隠れてオヤジの顔を蹴る猫　【今日のひのき猫】",
-      "url": "https://www.youtube.com/watch?v=FSNHhC3DGBE",
-      "mode": 0,
-      "tag": "daily"
-    },
-    {
       "name": "仲の良いオシドリ夫婦の猫　【今日のリアルタイムひのき猫】",
       "url": "https://www.youtube.com/watch?v=sgGS6OiuDl8",
-      "mode": 0,
-      "tag": "daily"
-    },
-    {
-      "name": "「幸せな猫家族」8月間毎日真剣に夫猫と子供の世話をしている猫の愛が凄すぎ！！！m4v",
-      "url": "https://www.youtube.com/watch?v=aOJxS6ZsLg8",
       "mode": 0,
       "tag": "daily"
     },
@@ -57,6 +45,12 @@
       "tag": "daily"
     },
     {
+      "name": "隠れてオヤジの顔を蹴る猫　【今日のひのき猫】",
+      "url": "https://www.youtube.com/watch?v=FSNHhC3DGBE",
+      "mode": 0,
+      "tag": "daily"
+    },
+    {
       "name": "外に出たい猫を巧妙にかわす息子がおもしろい",
       "url": "https://www.youtube.com/watch?v=y5eSIY4t8Gs",
       "mode": 0,
@@ -65,6 +59,12 @@
     {
       "name": "耳を押すとないちゃう黒猫",
       "url": "https://www.youtube.com/watch?v=yB9b36bQIg0",
+      "mode": 0,
+      "tag": "daily"
+    },
+    {
+      "name": "「幸せな猫家族」8月間毎日真剣に夫猫と子供の世話をしている猫の愛が凄すぎ！！！m4v",
+      "url": "https://www.youtube.com/watch?v=aOJxS6ZsLg8",
       "mode": 0,
       "tag": "daily"
     }
